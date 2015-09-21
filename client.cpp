@@ -12,6 +12,7 @@
 #include <stdexcept>
 #include <memory>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 int main( int argc, char ** argv )
@@ -59,7 +60,7 @@ int main( int argc, char ** argv )
                         keep_alive = false;
                         continue;
                     }
-                    client.send_msg(resp());
+                    client.send_msg(*(resp));
                 }
                 string data;
                 if(client.recieve(data))
