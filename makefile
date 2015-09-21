@@ -24,7 +24,7 @@ release: app
 clean:
 	rm -f app client.o control.o user.o
 
-app: client.cpp control.cpp user.cpp
+app: client.o control.o user.o
 	$(CXX) $^ -o $@ $(CXXFLAGS)
 
 %.o: %.cpp
