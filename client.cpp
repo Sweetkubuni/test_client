@@ -48,7 +48,7 @@ int main( int argc, char ** argv )
             }
 
             bool keep_alive = true;
-            user client(clientfd,'\n');
+            user client(clientfd,'a');
             control panel;
             while(keep_alive)
             {
